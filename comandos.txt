@@ -19,3 +19,9 @@ Comandos para analizar cambios en los archivos
 - git diff --git a/archivo.txt b/archivo.txt muestra la diferencia entrea la version anterior y la mas reciente, si se coloca luego de diff los id de los comit comparara ambos comiits
 - git log muestra todo el historial de commits de un archivo
 
+Flujo de trabajo git
+inicia en                     Directorio        /carpeta que contiene el proyecto/en este punto no se siguen los cambios (untracked)/
+                                   v            /git add para pasar los cambios al stage/
+los cambios son agregados a    Staging          /area de memoeria ram en donde se agregan los cambion, estos cambios son los que se envian al repositorio/en este punto se siguen los cambios (tracked)/
+                                   v            /git commit/
+Son enviados a                repositorio       /se almacenan los cambios en directorio .git/se almacenan en la rama correspondiente/ 
