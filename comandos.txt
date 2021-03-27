@@ -25,3 +25,15 @@ inicia en                     Directorio        /carpeta que contiene el proyect
 los cambios son agregados a    Staging          /area de memoeria ram en donde se agregan los cambion, estos cambios son los que se envian al repositorio/en este punto se siguen los cambios (tracked)/
                                    v            /git commit/
 Son enviados a                repositorio       /se almacenan los cambios en directorio .git/se almacenan en la rama correspondiente/ 
+
+Ramas
+podemos crear diferentes ramas ademas de la rama principal (master)
+cada rama contendra su historial de cambios
+se pueden crear ramas a partir de de commits especificos de la rama que querramos
+es posible combinar o juntar los cambios de dos ramas mediante un merge
+
+Master--------Mv1----Mv2----Mv3----------------------Mv4---------Mv5-------Mv6
+                             v                        ^merge      |         ^merge
+Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
+                                                                  v         |
+HotFix...........................................................Mv5-------Hv1
