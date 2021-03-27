@@ -1,0 +1,13 @@
+- git init: Inicializa el repositorio
+- git status: brinda el estado del repositorio
+- git add: agrega los cambios al stage de uno o multiples archivos 
+- git rm: elimina los cambios al stage de uno o multiples archivos
+- git commit: se envia los cambios al repositorio, se adiciona -m para agregar un mensaje e identificar el contenido de la version
+
+Configuracion de git
+- git config: se usa para configurar git, al ejecutar solo estas dos palabra brinda una lista de ayuda para ver demas funciones
+                --list: configuracion por defecto
+                        --show-origin: vemos en donde se encuentra guardadas las configuraciones
+                --global usar archivo de configuracion global
+                user.name "nombre del usuario" para configurar el nombre de usuario quien realiza los cambios
+                user.email "correo del usuario" para configurar el correo de usuario quien realiza los cambios
