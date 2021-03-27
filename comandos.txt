@@ -12,3 +12,7 @@ Configuracion de git
                 --global usar archivo de configuracion global
                 user.name "nombre del usuario" para configurar el nombre de usuario quien realiza los cambios
                 user.email "correo del usuario" para configurar el correo de usuario quien realiza los cambios
+
+Comandos para analizar cambios en los archivos
+- git show: muestra los cambios que hayan existido sobre un archivo
+- diff --git a/archivo.txt b/archivo.txt muestra la diferencia entrea la version anterior y la mas reciente
