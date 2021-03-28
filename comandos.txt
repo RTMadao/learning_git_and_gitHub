@@ -24,7 +24,7 @@ inicia en                     Directorio        /carpeta que contiene el proyect
                                    v            /git add para pasar los cambios al stage/
 los cambios son agregados a    Staging          /area de memoeria ram en donde se agregan los cambion, estos cambios son los que se envian al repositorio/en este punto se siguen los cambios (tracked)/
                                    v            /git commit/
-Son enviados a                repositorio       /se almacenan los cambios en directorio .git/se almacenan en la rama correspondiente/ 
+Son enviados a            repositorio local     /se almacenan los cambios en directorio .git/se almacenan en la rama correspondiente/ 
 
 Ramas
 podemos crear diferentes ramas ademas de la rama principal (master)
@@ -41,3 +41,10 @@ HotFix...........................................................Mv5-------Hv1
 Volver a una version anterior
  - git reset: se añade el id del commit, para volver a un commit anterior, eliminando todo el contenido de los commits posteriores, se puede implementar de dos formas --soft para conservar los elementos que se encuentren en el stage y --hard para no conservar nada de commits posteriores, por otro lado tenemos git reset HEAD, el cual elimina todos los archivos del stage, para incluirlos nuevamente se debera usar el git add
  - git checkout: se usa para volver a diferentes commits, tanto anteriores o posteriores, se puede especificar el id del comit y los archivos que se desean modificar
+
+Trabajar con repositorios remotos
+ - git clone: se agrega la url de un repositorio remoto, para copiar el contenido de este a un repositorio local
+ - git push: envia los cambios del repositorio local al repositorio remoto, se deberan de atender conflictos de ser necesario
+ - git fetch: trae los cambios del repositorio remoto al repositorio local, se deberan de atender conflictos de ser necesario, para luego traer estos cambios al directorio del proyecto se debera de usar el comando git merge
+ - git merge: combina los datos del repositorio con el directorio0
+ -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
