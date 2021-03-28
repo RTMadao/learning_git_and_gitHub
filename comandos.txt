@@ -37,3 +37,7 @@ Master--------Mv1----Mv2----Mv3----------------------Mv4---------Mv5-------Mv6
 Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
                                                                   v         |
 HotFix...........................................................Mv5-------Hv1
+
+Volver a una version anterior
+ - git reset: se añade el id del commit, para volver a un commit anterior, eliminando todo el contenido de los commits posteriores, se puede implementar de dos formas --soft para conservar los elementos que se encuentren en el stage y --hard para no conservar nada de commits posteriores
+ - git checkout: se usa para volver a diferentes commits, tanto anteriores o posteriores, se puede especificar el id del comit y los archivos que se desean modificar
