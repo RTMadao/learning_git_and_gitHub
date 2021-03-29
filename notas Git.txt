@@ -1,0 +1,57 @@
+Comandos de git para guardar cambios
+- git init: Inicializa el repositorio
+- git status: brinda el estado del repositorio
+- git add: agrega los cambios al stage de uno o multiples archivos 
+- git rm: elimina los cambios del stage de uno o multiples archivos, contampos con dos flags --cached el cual elimina el archivo del stage y de los proximos commits, y --force que adicionalmente a eso, elimina el archivo del disco
+- git commit: se envia los cambios al repositorio, se adiciona -m para agregar un mensaje e identificar el contenido de la version
+                al no agregar -m se habre el editor de texto de linea de compando, nano o vim o cualquier otro configurado, para agregar el mensaje del commit, al usar el flag --add -a automaticamente se agregaran los cambios de archivos que ya hayan sido trackeados previamente
+
+Configuracion de git
+- git config: se usa para configurar git, al ejecutar solo estas dos palabra brinda una lista de ayuda para ver demas funciones
+                --list: configuracion por defecto
+                        --show-origin: vemos en donde se encuentra guardadas las configuraciones
+                --global usar archivo de configuracion global
+                user.name "nombre del usuario" para configurar el nombre de usuario quien realiza los cambios
+                user.email "correo del usuario" para configurar el correo de usuario quien realiza los cambios
+
+Comandos para analizar cambios en los archivos
+- git show: muestra los cambios recientes que hayan existido sobre un archivo
+- git diff --git a/archivo.txt b/archivo.txt muestra la diferencia entrea la version anterior y la mas reciente, si se coloca luego de diff los id de los comit comparara ambos comiits
+- git log muestra todo el historial de commits de un archivo
+
+Flujo de trabajo git
+inicia en                     Directorio        /carpeta que contiene el proyecto/en este punto no se siguen los cambios (untracked)/
+                                   v            /git add para pasar los cambios al stage/
+los cambios son agregados a    Staging          /area de memoeria ram en donde se agregan los cambion, estos cambios son los que se envian al repositorio/en este punto se siguen los cambios (tracked)/
+                                   v            /git commit/
+Son enviados a            repositorio local     /se almacenan los cambios en directorio .git/se almacenan en la rama correspondiente/ 
+
+Ramas
+podemos crear diferentes ramas ademas de la rama principal (master)
+cada rama contendra su historial de cambios
+se pueden crear ramas a partir de de commits especificos de la rama que querramos
+es posible combinar o juntar los cambios de dos ramas mediante un merge
+
+Master--------Mv1----Mv2----Mv3----------------------Mv4---------Mv5-------Mv6
+                             v                        ^merge      |         ^merge
+Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
+                                                                  v         |
+HotFix...........................................................Mv5-------Hv1
+
+- git branche: crea una nueva rama
+- git checkout: para moverse entre ramas, al usar flag -b se creara una nueva rama y se movera a ella
+                es importante realizar commit para no perder los cambios realizados antes de cambiar de rama
+
+
+Volver a una version anterior
+ - git reset: se añade el id del commit, para volver a un commit anterior, eliminando todo el contenido de los commits posteriores, se puede implementar de dos formas --soft para conservar los elementos que se encuentren en el stage y --hard para no conservar nada de commits posteriores, por otro lado tenemos git reset HEAD, el cual elimina todos los archivos del stage, para incluirlos nuevamente se debera usar el git add
+ - git checkout: se usa para volver a diferentes commits, tanto anteriores o posteriores, se puede especificar el id del comit y los archivos que se desean modificar
+
+Trabajar con repositorios remotos
+ - git clone: se agrega la url de un repositorio remoto, para copiar el contenido de este a un repositorio local
+ - git push: envia los cambios del repositorio local al repositorio remoto, se deberan de atender conflictos de ser necesario
+ - git fetch: trae los cambios del repositorio remoto al repositorio local, se deberan de atender conflictos de ser necesario, para luego traer estos cambios al directorio del proyecto se debera de usar el comando git merge
+ - git merge: combina los datos del repositorio con el directorio0
+ -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
+- git remote: nos permite ver los repositorios remotos que tenemos registrados en el proyectro
+                con add segudo de la url del repositorio agregamos un nuevo repositorio remoto
