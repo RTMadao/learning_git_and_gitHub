@@ -39,6 +39,7 @@ Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
 HotFix...........................................................Mv5-------Hv1
 - git branche: crea una nueva rama
 - git checkout: para moverse entre ramas, al usar flag -b se creara una nueva rama y se movera a ella
+                esperando informacion de otra rama
 
 
 Volver a una version anterior
