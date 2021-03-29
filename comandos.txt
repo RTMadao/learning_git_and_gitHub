@@ -54,4 +54,4 @@ Trabajar con repositorios remotos
  - git merge: combina los datos del repositorio con el directorio0
  -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
 
-**ESTA ES UNA RAMA ALTERNA A LA RAMA PRINCIPAL**
+**ESTA ES UNA RAMA ALTERNA A LA RAMA PRINCIPAL** esteprando conflicto
