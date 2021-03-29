@@ -4,7 +4,7 @@ Comandos de git para guardar cambios
 - git add: agrega los cambios al stage de uno o multiples archivos 
 - git rm: elimina los cambios del stage de uno o multiples archivos, contampos con dos flags --cached el cual elimina el archivo del stage y de los proximos commits, y --force que adicionalmente a eso, elimina el archivo del disco
 - git commit: se envia los cambios al repositorio, se adiciona -m para agregar un mensaje e identificar el contenido de la version
-                al no agregar -m se habre el editor de texto de linea de compando, nano o vim o cualquier otro configurado, para agregar el mensaje del commit
+                al no agregar -m se habre el editor de texto de linea de compando, nano o vim o cualquier otro configurado, para agregar el mensaje del commit, al usar el flag --add -a automaticamente se agregaran los cambios de archivos que ya hayan sido trackeados previamente
 
 Configuracion de git
 - git config: se usa para configurar git, al ejecutar solo estas dos palabra brinda una lista de ayuda para ver demas funciones
@@ -37,6 +37,9 @@ Master--------Mv1----Mv2----Mv3----------------------Mv4---------Mv5-------Mv6
 Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
                                                                   v         |
 HotFix...........................................................Mv5-------Hv1
+- git branche: crea una nueva rama
+- git checkout: para moverse entre ramas, al usar flag -b se creara una nueva rama y se movera a ella
+
 
 Volver a una version anterior
  - git reset: se añade el id del commit, para volver a un commit anterior, eliminando todo el contenido de los commits posteriores, se puede implementar de dos formas --soft para conservar los elementos que se encuentren en el stage y --hard para no conservar nada de commits posteriores, por otro lado tenemos git reset HEAD, el cual elimina todos los archivos del stage, para incluirlos nuevamente se debera usar el git add
