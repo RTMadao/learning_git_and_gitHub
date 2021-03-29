@@ -51,3 +51,4 @@ Trabajar con repositorios remotos
  - git fetch: trae los cambios del repositorio remoto al repositorio local, se deberan de atender conflictos de ser necesario, para luego traer estos cambios al directorio del proyecto se debera de usar el comando git merge
  - git merge: combina los datos del repositorio con el directorio0
  -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
+
