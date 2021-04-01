@@ -53,8 +53,13 @@ Trabajar con repositorios remotos
  - git fetch: trae los cambios del repositorio remoto al repositorio local, se deberan de atender conflictos de ser necesario, para luego traer estos cambios al directorio del proyecto se debera de usar el comando git merge
  - git merge: combina los datos del repositorio con el directorio0
  -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
-- git remote: nos permite ver los repositorios remotos que tenemos registrados en el proyectro
+ - git remote: nos permite ver los repositorios remotos que tenemos registrados en el proyectro
                 con add segudo de la url del repositorio agregamos un nuevo repositorio remoto
                 con set-url se puede cambiar la url del remoto
 
 Al tratar de conectar un repositorio local ya existente con un repositorio en gitHub puede presentarse un conflicto debido a que no permite realizar merge de historias no relacionadas (Historias son el conjunto de commits del repositorio), por lo que se usa --allow-unrelated-histories para realizar el merge, puede usarse en el merge o en el pull
+
+Agregando Tags
+ - suelen usarse principalmente en proyectos de codigo abuierto para brindar mas informacion de las versiones del proyecto o en proyectos personales para servir de guiua 
+ - git tag -a nombreTag -m"mensaje" idCommit
+ 
