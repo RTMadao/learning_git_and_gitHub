@@ -1,0 +1,7 @@
+Para lograr enviar mensajes a travez de internet de forma segura uno de los protocolos mas utilizados es SSH
+- con el contamos con llaves publicas y privadas, una llave publica para que el emisor pueda cifrar el mensaje y la llave privada que solo se conserva en el local del receptor para descifrar ese mensaje
+- cuando ambas partes de la comunicacion cuentan con la llave publica de la parte contraria se convierte en una comunicacion de doble camino cifrada. 
+
+Para generar una llave SSH
+    - Se ejecuta el siguiente comando ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+    - Luego se añade la llave al servidor ssh-add ruta-donde-guardaste-tu-llave-privada
