@@ -82,3 +82,6 @@ con git stash list vemos los elementos que hayamos agregado al stash
 Eliminar archivos erroneos
 - git clean -f borra elementos que no esten en el stage, siempre en cuando puedan ser traqueados y no sean carpetas
 - con git clean --dry-run vemos una simulacion de lo que se borrara al ejecutar el comando
+
+Enviar un commit especifico de una rama a otra
+- usando git cherry-pick seguido del id del commit podemos traer un commit a nuestra rama actual, sin necesidad de hacer un merge para combinar todos los cmabios 
