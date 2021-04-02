@@ -51,7 +51,7 @@ Trabajar con repositorios remotos
  - git clone: se agrega la url de un repositorio remoto, para copiar el contenido de este a un repositorio local
  - git push: envia los cambios del repositorio local al repositorio remoto, se deberan de atender conflictos de ser necesario
  - git fetch: trae los cambios del repositorio remoto al repositorio local, se deberan de atender conflictos de ser necesario, para luego traer estos cambios al directorio del proyecto se debera de usar el comando git merge
- - git merge: combina los datos del repositorio con el directorio0
+ - git merge: combina los datos del repositorio con el directorio
  -git pull: combina las funcionalidades de los comandos fetch y merge, ya que este comando trae los cmabios del repositorio remoto al local e inmediatamente los agrega al directorio
  - git remote: nos permite ver los repositorios remotos que tenemos registrados en el proyectro
                 con add segudo de la url del repositorio agregamos un nuevo repositorio remoto
@@ -62,4 +62,9 @@ Al tratar de conectar un repositorio local ya existente con un repositorio en gi
 Agregando Tags
  - suelen usarse principalmente en proyectos de codigo abuierto para brindar mas informacion de las versiones del proyecto o en proyectos personales para servir de guiua 
  - git tag -a nombreTag -m"mensaje" idCommit
- 
+
+
+Para Buenas practicas
+- Contamos con la rama master (main), la cual es la rama con el codigo final del proyecto, donde se suben los cambios del proyecto terminado, por lo que es la rama que enviaremos a produccion
+- contamos con una rama adicional llamada staging develop como un entorno de prueba, donde se verifica si el codigo puede ser enviado a produccion
+- para trabajar de forma colaborativa y sugerir cambios en el codigo GitHub nos ofrece la opcion de usar pull request, donde podemos solicitar una revicion y aprovacion para realizar un merge desde una rama donde se estan sugiriendo los cambios hasta otra rama donde estos cambios son necesarios, como master
