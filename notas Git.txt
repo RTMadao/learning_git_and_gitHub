@@ -68,3 +68,7 @@ Para Buenas practicas
 - Contamos con la rama master (main), la cual es la rama con el codigo final del proyecto, donde se suben los cambios del proyecto terminado, por lo que es la rama que enviaremos a produccion
 - contamos con una rama adicional llamada staging develop como un entorno de prueba, donde se verifica si el codigo puede ser enviado a produccion
 - para trabajar de forma colaborativa y sugerir cambios en el codigo GitHub nos ofrece la opcion de usar pull request, donde podemos solicitar una revicion y aprovacion para realizar un merge desde una rama donde se estan sugiriendo los cambios hasta otra rama donde estos cambios son necesarios, como master
+
+Ignorar archivos
+- para ignorar archivos que no queremos que se suban a nuestro repositorio agregamos los nombres de dichos archivos o las extensiones de archivos a un nuevo archivo llamado .gitignore
+- para crear excepciones agregamos el simbolo ! antes del nombre del archivo
