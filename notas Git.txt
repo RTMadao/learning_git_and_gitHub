@@ -78,3 +78,7 @@ Con git stash podemos regresar el cambio anterior que hicimos
 con git stash list vemos los elementos que hayamos agregado al stash
 - con git stash pop retornaremos esos cambios guardados a la rama en la que nos encontremo0s, es importante que lo hagamos en la misma rama en la cual lo ejecutamos
 - con git stash drop borramos esos cambios almacenados en ese espacio temporal
+
+Eliminar archivos erroneos
+- git clean -f borra elementos que no esten en el stage, siempre en cuando puedan ser traqueados y no sean carpetas
+- con git clean --dry-run vemos una simulacion de lo que se borrara al ejecutar el comando
