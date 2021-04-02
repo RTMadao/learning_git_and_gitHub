@@ -85,3 +85,6 @@ Eliminar archivos erroneos
 
 Enviar un commit especifico de una rama a otra
 - usando git cherry-pick seguido del id del commit podemos traer un commit a nuestra rama actual, sin necesidad de hacer un merge para combinar todos los cmabios 
+
+Agregar contenido a ultimo commit guardados
+- haciendo uso de git commit --amend podemos agregar cambios a el ultimo commit registrado, es importante agregar los cmabios al stage antes de enviar el commit
