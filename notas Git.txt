@@ -18,6 +18,9 @@ Comandos para analizar cambios en los archivos
 - git show: muestra los cambios recientes que hayan existido sobre un archivo
 - git diff --git a/archivo.txt b/archivo.txt muestra la diferencia entrea la version anterior y la mas reciente, si se coloca luego de diff los id de los comit comparara ambos comiits
 - git log muestra todo el historial de commits de un archivo
+        - agregando el flag -S y luego una palabra o frase  podemos buscar en el historial la incidendia de ese termino en los commits
+- git reflog muestra todos los cambios incluso luiego de que estos hayan sido borrados
+- git blame nombreArchivo nos permite ver quien modifico que lieas de un archivo especifico
 
 Flujo de trabajo git
 inicia en                     Directorio        /carpeta que contiene el proyecto/en este punto no se siguen los cambios (untracked)/
@@ -38,7 +41,9 @@ Development.................Mv3-----Dv1-----Dv2------Dv3          |         |
                                                                   v         |
 HotFix...........................................................Mv5-------Hv1
 
-- git branche: crea una nueva rama
+- git branche: lista las ramas que existen
+                con -r muestra las ramas remotas
+                con -a muestra todas las ramas
 - git checkout: para moverse entre ramas, al usar flag -b se creara una nueva rama y se movera a ella
                 es importante realizar commit para no perder los cambios realizados antes de cambiar de rama
 
@@ -88,3 +93,6 @@ Enviar un commit especifico de una rama a otra
 
 Agregar contenido a ultimo commit guardados
 - haciendo uso de git commit --amend podemos agregar cambios a el ultimo commit registrado, es importante agregar los cmabios al stage antes de enviar el commit
+
+Alias
+- podemos crear alias de comandos para que mediante un alias activemos un comando extenso, para ello es necesario guardar el alias en la configuracion de git git config --global alias.nombreDelAlias "Comando a referencias"
