@@ -72,3 +72,9 @@ Para Buenas practicas
 Ignorar archivos
 - para ignorar archivos que no queremos que se suban a nuestro repositorio agregamos los nombres de dichos archivos o las extensiones de archivos a un nuevo archivo llamado .gitignore
 - para crear excepciones agregamos el simbolo ! antes del nombre del archivo
+
+Con git stash podemos regresar el cambio anterior que hicimos
+- al ingresar Git stash volveremos al estado el ultimo commit y todos los cambios que hayamos realizado se guardaran en un espacio temporal
+con git stash list vemos los elementos que hayamos agregado al stash
+- con git stash pop retornaremos esos cambios guardados a la rama en la que nos encontremo0s, es importante que lo hagamos en la misma rama en la cual lo ejecutamos
+- con git stash drop borramos esos cambios almacenados en ese espacio temporal
